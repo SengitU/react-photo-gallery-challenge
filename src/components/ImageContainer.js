@@ -8,11 +8,11 @@ export default class ImageContainer extends Component {
     }
 
     render() {
-        let photos = this.props.photos.map(photo => {
-            return <Image key={Math.random()} photo={photo}/>
+        let photos = this.props.photos.map((photo, index) => {
+            return <Image key={index} photo={photo}/>
         });
         return (
-          <div className ={this.props.className}>
+          <div className={this.props.className}>
                 {photos}
           </div>
         );
